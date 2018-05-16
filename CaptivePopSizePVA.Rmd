@@ -1,5 +1,5 @@
 ---
-title: "Required size of captive population during mouse eradication on Gough"
+title: "Required captive population size of Gough buntings Rowettia goughensis during the mouse eradication on Gough 2019"
 author: "Antje Steinfurth, Steffen Oppel"
 date: "14 May 2018"
 output: html_document
