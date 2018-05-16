@@ -190,8 +190,8 @@ POPEST<- SIM_OUT %>% group_by(pop.size) %>%
 ggplot(SIM_OUT, aes(x=pop.size, y=OUTCOME)) + geom_point() +
   geom_hline(aes(yintercept=acceptable_risk), color='red', size=1) +
   xlab("Captive population size") +
-  ylab("Prob. of Gough Bunting extinct within 50 years") +
-  annotate("text", x=75, y=0.65, label= sprintf("Captive population of %s birds needed", POPEST), size=5, colour= 'red') + 
+  ylab("Prob. of Gough Bunting pop. extinct within 50 years") +
+  annotate("text", x=75, y=0.65, label= sprintf("Captive population of %s birds needed", POPEST), size=7, colour= 'red') + 
   theme(panel.background=element_rect(fill="white", colour="black"), 
         axis.text=element_text(size=16, color="black"), 
         axis.title=element_text(size=20), 
