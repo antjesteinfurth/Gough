@@ -22,7 +22,27 @@ We used a simple two-stage matrix population model to calculate the annual popul
 
 We calculated annual population growth rate using a plausible range of demographic parameters which were derived from literature values and unpublished data. Specifically, we used the following values:
 
-+ annual adult survival probability - range from `r min(Sa)` to `r max(Sa)` based on unpublished data ...
++ annual adult survival probability - range from `r min(Sa)` to `r max(Sa)` based on proaches 100%.
+It is therefore critical that the size of the safety population kept in captivity is large enough to ensure that the species will survive even if all other individuals are killed during the eradication. To approximate this number, we conducted several simulations to assess the probability that the species will go extinct if only the birds from the captive population survive. These simulations can form a basis for deciding the size of the captive populations, they do not provide a definitive answer.
+
+
+## Demographic model and population viability analysis
+
+We used a simple two-stage matrix population model to calculate the annual population growth rate. With this population growth rate we used a Ricker model to extrapolate the population size, and we included a `r SD_lambda*100`% of stochastic variation around the annual population growth rate. We also imposed an upper limit of `r K` individuals as the carrying capacity on Gough, and included a scenario of a catastrophic population collapse that reduced the population to `r Catastrophe_severity*100`% in years when such a catastrophe occurred. Catastrophes were assumed to occur with a probability of `r Catastrophe_prob*100`% each year. In addition, we assumed that some of the captive birds would not be released in a healthy or reproductive state (or died during captivity), and this number of individuals was randomised based on a Poisson distribution with mean of `r captfail` and subtracted from the initial population size of the viability assessment.
+
+We calculated annual population growth rate using a plausible range of demographic parameters which were derived from literature values and unpublished data. Specifically, we used the following values:
+
++ annual adult survival probability - range from `r min(Sa)` to `r max(Sa)` based proaches 100%.
+It is therefore critical that the size of the safety population kept in captivity is large enough to ensure that the species will survive even if all other individuals are killed during the eradication. To approximate this number, we conducted several simulations to assess the probability that the species will go extinct if only the birds from the captive population survive. These simulations can form a basis for deciding the size of the captive populations, they do not provide a definitive answer.
+
+
+## Demographic model and population viability analysis
+
+We used a simple two-stage matrix population model to calculate the annual population growth rate. With this population growth rate we used a Ricker model to extrapolate the population size, and we included a `r SD_lambda*100`% of stochastic variation around the annual population growth rate. We also imposed an upper limit of `r K` individuals as the carrying capacity on Gough, and included a scenario of a catastrophic population collapse that reduced the population to `r Catastrophe_severity*100`% in years when such a catastrophe occurred. Catastrophes were assumed to occur with a probability of `r Catastrophe_prob*100`% each year. In addition, we assumed that some of the captive birds would not be released in a healthy or reproductive state (or died during captivity), and this number of individuals was randomised based on a Poisson distribution with mean of `r captfail` and subtracted from the initial population size of the viability assessment.
+
+We calculated annual population growth rate using a plausible range of demographic parameters which were derived from literature values and unpublished data. Specifically, we used the following values:
+
++ annual adult survival probability - range from `r min(Sa)` to `r max(Sa)` based on an estimated adult lifespan of ~10-11 yrs (B. Dilley pers. communication)
 + annual juvenile survival probability - range from `r min(Sj)` to `r max(Sj)` based on ...
 + annual fecundity - range from `r min(F)` to `r max(F)` based on Cuthbert and Hilton (2004) and unpublished nest records from 2009
 
